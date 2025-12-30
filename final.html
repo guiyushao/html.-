@@ -1,0 +1,309 @@
+<html>
+
+<head>
+    <title>Div-Slider</title>
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+    <script>
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide"
+            });
+        });
+    </script>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+
+         .top{
+             background-color: white;
+      	     height:150px;
+      	     display:flex;
+      	     align-items:center;
+        }
+        .top .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width:100%;
+	          padding:0 20px;
+        }
+        .top .logo{
+            /*border:1px solid red;*/
+            font-size:45px;
+            font-weight: bold;
+            font-family: 芫荽; 
+            color:#70cce1;
+	          display:flex;
+	          align-items:center;
+	          gap:15px;
+        }
+        .top .logo img{
+    	      height:70px;
+    	      width:auto;
+    	      object-fit:contain;
+        }
+        .top .top-nav{
+            //border:1px solid red;
+            font-size: 30px;
+            font-weight: bold; 
+            font-family: 芫荽;
+      	    padding-top:5px;
+      	    margin-top:5px;
+         }
+        .top .top-nav a{
+            text-decoration: none;
+            color:#6c8cd7;
+        }
+
+
+        #b2 { 
+            height: 50px;
+            background-color:  #6c8cd7;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 40px;
+	          font-family: 芫荽; 
+        }
+        .b2-1 {
+            line-height: 50px;
+	          padding: 0px 40px;
+            //border: 1px red solid;
+        }
+        .b2-1:hover {
+            background-color: rgb(106, 106, 106);
+            /*設定背景顏色*/
+        }
+        /*nav*/
+        .b2-1 ul {
+            display: none;
+            position: absolute;
+            /*絕對定位*/
+            z-index: 1;
+            /*設定層級，避免被其他元素蓋住*/
+            background-color: rgb(106, 106, 106);
+            min-width: 100px;
+            list-style-type: none;
+            /*移除項目符號*/
+        }
+        .b2-1:hover ul {
+            display: block;
+            margin: 0px;
+            padding: 0px;
+        }
+        .b2-1:hover ul li:hover {
+            background-color: white;
+        }
+        .b2-1 li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            padding: 0px 16px;
+        }
+        .b2-1:hover ul li:hover a {
+            color: black;
+        }
+	.b2-1 a {
+            color: white;
+            text-decoration: none;
+	}
+
+
+        /*nav end*/
+
+        .slider {
+            background-color: black;
+        }
+
+
+        #b3 {
+            height: 700px;
+            background-image:url(blue-light-sky.jpg);
+      	    background-repeat:no-repeat;
+      	    background-size:cover;
+      	    background-position:center center; 
+      	    font-family:芫荽; 
+      	    text-align:center;
+        }
+        #b3 h1 {
+            color: white;
+            padding: 50px 150px;
+            margin: 0px; //會影響#b2的margin
+      	    font-family:芫荽; 
+      	    text-align:center;
+        }
+        #b3 h2 {
+            color:#6c8cd7;
+            padding: 50px 150px;
+            margin: 0px; //會影響#b2的margin
+      	    font-family:芫荽; 
+        }
+
+
+        #b4 {
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0px 300px;
+	          object-fit:contain;
+	          color:#6c8cd7;
+	          font-family:芫荽;
+	          font-size: 25px;   
+        }
+    	  #b4 h1{
+      	    color: #f4e7bd;
+            background-color: #6c8cd7;
+      	    border:5px #6c8cd7 solid;
+      	    font-size: 30px;
+    	  }
+
+        img {
+            width: 200px;
+            height: 500px;
+	          object-fit:contain;
+            //border: 5px red solid;
+
+        }
+
+        #b5 {
+            height: 70px;
+            line-height: 70px;
+            background-color: #6c8cd7;
+        }
+
+        #b5 h4 {
+            color: white;
+            text-align: center;
+            margin: 0px;
+        }
+
+        #b6 {
+            height: 400px;
+	}
+
+	.marquee-container {
+  	width: 100%;
+  	overflow: hidden;
+  	white-space: nowrap;
+  	background: #6c8cd7;
+  	color: white;
+  	padding: 10px 0;
+  	font-family:;芫荽;
+	}
+
+	.marquee-content {
+  	display: inline-block;
+  	animation: marquee 20s linear infinite;
+	}
+
+	.marquee-content span {
+ 	 display: inline-block;
+ 	 padding: 0 50px;
+ 	 font-size: 18px;
+  	font-weight: bold;
+	}	
+
+	@keyframes marquee {
+  	0% { transform: translateX(0); }
+ 	 100% { transform: translateX(-50%); }
+	}
+
+	/* 懸停暫停 */
+	.marquee-container:hover .marquee-content {
+ 	 animation-play-state: paused;
+	}
+
+    </style>
+</head>
+
+<body>
+	<div class="top">
+            <div class="container">
+                <div class="logo">
+                  <img src="export202406050314556060.png">
+                  後空翻少年！！
+                </div>
+
+                <div class="top-nav">
+                  <a href="https://bakuten-pr.com/">動畫官方網站</a>
+                  <a href="https://x.com/bakuten_pr">官方X(Twitter)</a>
+                </div>
+              </div>
+        </div>
+
+	<div id="b2">
+        	<div class="b2-1">首頁</div>
+		<div class="b2-1"><a href="https://zh.wikipedia.org/zh-tw/%E5%BE%8C%E7%A9%BA%E7%BF%BB%E5%B0%91%E5%B9%B4%EF%BC%81%EF%BC%81">製作團隊</a>	</div>
+        <div class="b2-1">角色介紹
+            <ul>
+                <li><a href="https://bakuten-pr.com/character/">私立蒼秀館高中</a></li>
+                <li><a href="https://bakuten-pr.com/character/">私立白鳴大學附屬高中</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="b2-1"><a href="https://www.sentabi.jp/feature/bakuten/">聖地巡禮</a></div>
+    </div>
+
+    <div class="slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li><img src="https://pbs.twimg.com/media/E12DbsuUUAIhjJ-?format=jpg&name=medium" /></li>
+                <li><img src="https://pbs.twimg.com/media/E8APv3-UcAMF3tW?format=jpg&name=medium" /></li>
+                <li><img src="https://pbs.twimg.com/media/FBOLlFJVQAAyP1w?format=jpg&name=900x900" /></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="b3">
+        <h1>「笑ったぶんだけ高く、泣いたぶんだけ強く」<br>「笑得越多，就飛得越高；哭得越多，就變得更堅強。」</h1>
+	<h2>
+	中學生活最後一年的夏天，與『男子韻律體操』邂逅，<p>
+	並深深被其吸引的少年—「雙葉翔太郎」。<p>
+
+	升入私立蒼秀館高等學校（通稱：蒼高）的翔太郎，敲響了男子新體操部的大門。<p>
+	在那裡的是充滿個性的前輩們，以及中學男子新體操新星「美里良夜」。<p>
+
+	全身心投入在一件事上、享受熾熱的青春歲月。<p>
+	即使偶爾會遭逢挫折與分歧，也在每天與同伴們共度的過程當中努力朝向一個目標，<p>
+	描繪全隊一心奔跑的身影的「運動毅力×青春群像劇」。<p>
+
+	這年春天，獻上熱情的真實青春，就此展開——
+	</h2>
+    </div>
+
+
+    <div id="b4">
+	<h1>　<br>主<br>要<br>角<br>色<br>　<br></h1>
+        <img src="雙葉翔太郎.png"style="width:230px;height: auto;">雙葉翔太郎
+        <img src="美里里.png"style="width:230px;height: auto;">美里良夜
+        <img src="ush.png">月雪真白
+    </div>
+
+    <div id="b6">
+	<div class="marquee-container">
+  	<div class="marquee-content">
+    	<span>✦ 原創動畫 — 共12集 & 電影預告 ✦</span>
+    	<span>✦ 原創動畫 — 共12集 & 電影預告 ✦</span>
+    	<span>✦ 原創動畫 — 共12集 & 電影預告 ✦</span>
+    </div>
+    </div>
+    <p style="text-align: center"><iframe width="560" height="315" src="https://www.youtube.com/embed/2bKE4zlhl9U?si=ywvefw3I1weac0nO&amp;controls=0" 	title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-	share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/Q1TPRt2IWtA?si=5taPB_I2PrD-eTeK&amp;controls=0" title="YouTube video player" 	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-	origin-when-cross-origin" allowfullscreen></iframe></p>
+
+	</div>
+
+    <div id="b5">
+        <h4>版權所有©バクテン製作委員會</h4>
+    </div>
+</body>
+
+</html>
